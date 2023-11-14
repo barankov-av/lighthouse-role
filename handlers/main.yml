@@ -1,0 +1,8 @@
+---
+- name: Start nginx
+  become: true
+  ansible.builtin.systemd:
+    daemon_reload: true
+    enabled: false
+    name: nginx.service
+    state: started
